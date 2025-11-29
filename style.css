@@ -1,0 +1,273 @@
+/* =============================
+   Style CSS untuk Supplier Grosir (Updated dengan Hero Image)
+   ============================= */
+
+/* --- Variabel Warna --- */
+:root {
+    --color-primary: #004d40; /* Hijau Tua/Deep Teal */
+    --color-secondary: #00796b; /* Hijau Sedang */
+    --color-cta-wa: #25d366; /* Hijau WhatsApp */
+    --color-cta-hover: #128c7e;
+    --color-background-light: #e0f2f1; /* Hijau Muda Background */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-orange: #ff9800;
+    --color-orange-hover: #e68900;
+}
+
+/* --- Global & Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em; /* Sedikit lebih besar */
+    font-weight: 600; /* Lebih tebal */
+    letter-spacing: 0.5px;
+}
+
+/* --- Hero Section dengan Background Image --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-grosir.jpg') no-repeat center center; /* <--- GANTI 'hero-grosir.jpg' dengan nama file gambar Anda */
+    background-size: cover;
+    padding: 100px 20px; /* Padding lebih besar untuk visual */
+    text-align: center;
+    color: var(--color-text-light); /* Teks putih untuk kontras dengan gambar */
+    display: flex; /* Untuk vertikal centering */
+    align-items: center; /* Vertikal centering */
+    min-height: 500px; /* Tinggi minimum untuk hero section */
+}
+
+.hero .container {
+    padding: 0; /* Hapus padding agar gambar bisa penuh */
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Lebih besar */
+    margin-bottom: 20px;
+    color: var(--color-text-light); /* Teks putih */
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow untuk keterbacaan */
+}
+
+.hero p {
+    font-size: 1.5em; /* Lebih besar */
+    margin-bottom: 50px;
+    color: #e0e0e0; /* Sedikit abu-abu muda */
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- CTA Button (Call to Action) --- */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-cta-wa);
+    color: var(--color-text-light) !important;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-cta-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Bagian Konten (Features/Keuntungan) --- */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--color-primary);
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section h2::after { /* Garis bawah h2 */
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+}
+
+.features {
+    display: flex;
+    justify-content: center; /* Menggunakan center untuk gap */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px; /* Batasi lebar box */
+    padding: 30px;
+    background: var(--color-text-light);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box h3 {
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.feature-box p {
+    font-size: 1.05em;
+    color: #666;
+}
+
+/* --- Final CTA Section --- */
+.final-cta {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    padding: 80px 20px; /* Padding lebih besar */
+    text-align: center;
+}
+
+.final-cta h2 {
+    color: var(--color-text-light);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+.final-cta .cta-button {
+    background-color: var(--color-orange); /* Warna Oranye Kontras */
+}
+
+.final-cta .cta-button:hover {
+    background-color: var(--color-orange-hover);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.95em;
+}
+
+/* --- Floating WhatsApp Button --- */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px; /* Lebih ke atas */
+    right: 30px; /* Lebih ke kiri */
+    z-index: 1000;
+}
+
+.floating-whatsapp a {
+    display: flex; /* Menggunakan flexbox untuk centering ikon */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-cta-wa);
+    color: var(--color-text-light);
+    width: 65px; /* Sedikit lebih besar */
+    height: 65px;
+    border-radius: 50%;
+    font-size: 32px; /* Ikon lebih besar */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.floating-whatsapp a:hover {
+    background-color: var(--color-cta-hover);
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Responsif (Mobile View) --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px;
+        min-height: 400px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+    .cta-button {
+        padding: 15px 25px;
+        font-size: 1.1em;
+    }
+    .section h2 {
+        font-size: 1.8em;
+    }
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .feature-box {
+        max-width: 100%;
+    }
+    .final-cta h2 {
+        font-size: 2em;
+    }
+    .final-cta p {
+        font-size: 1em;
+    }
+    .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+    }
+    .floating-whatsapp a {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+}
